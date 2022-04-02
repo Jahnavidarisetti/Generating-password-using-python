@@ -20,7 +20,6 @@ SYMBOLS = ['`', '~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-',
 COMBINED_LIST = UPPER_CASE_CHARACTERS + LOWER_CASE_CHARACTERS + DIGITS + SYMBOLS
 
 # select atleast one character from each set listed above
-
 upper = random.choice(UPPER_CASE_CHARACTERS)
 lower = random.choice(LOWER_CASE_CHARACTERS)
 digit = random.choice(DIGITS)
@@ -31,15 +30,14 @@ symbol = random.choice(SYMBOLS)
 temp_pass = upper + lower + digit + symbol
 
 # code for 14 characters length of password
-
 for x in range(max_len - 4):
  temp_pass = temp_pass + random.choice(COMBINED_LIST)
  
 # change temporary password to an array to prevent the password from predicting
-
 temp_pass_list = array.array('u', temp_pass)
 random.shuffle(temp_pass_list)
 
+# generating password
 password = ""
 for x in temp_pass_list:
  password = password + x

@@ -16,9 +16,11 @@ DIGITS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 SYMBOLS = ['`', '~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '=', '+', '[', ']', '{', '}', ':', ';', '/', '|', '<', '>']
 
 # join all the characters listed above to form the array 
+
 COMBINED_LIST = UPPER_CASE_CHARACTERS + LOWER_CASE_CHARACTERS + DIGITS + SYMBOLS
 
 # select atleast one character from each set listed above
+
 upper = random.choice(UPPER_CASE_CHARACTERS)
 lower = random.choice(LOWER_CASE_CHARACTERS)
 digit = random.choice(DIGITS)
@@ -27,6 +29,7 @@ symbol = random.choice(SYMBOLS)
 # join all the random characters selected above but the password length is only 4
 
 temp_pass = upper + lower + digit + symbol
+
 # code for 14 characters length of password
 
 for x in range(max_len - 4):
